@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
+
 
 const Wrapper = styled.div`
   display: flex;
@@ -19,6 +21,7 @@ const SearchBar = styled.input`
 
 const SearchButton = styled.button`
   border: 0;
+  cursor: pointer;
 `
 
 const WrapperSearch = styled.div`
@@ -28,16 +31,24 @@ const WrapperSearch = styled.div`
   justify-content: space-between;
 `
 
-const ListItem = styled.a`
+const ListItem = styled(Link)`
   width: 100%;
   background-color: #ffffff;
   padding: 4px 8px;
   margin: 4px;
+  text-decoration: none;
+  color: #000000;
 `
 
 const LabelListItem = styled.p`
   font-size: 16px;
 `
+const LoadMoreButton = styled.button`
+  width: 100%;
+  border: 0;
+  padding: 24px 0;
+  margin-top: 32px;
+  cursor: pointer;
+`
 
-
-export { Wrapper, SearchBar,SearchButton, WrapperSearch,ListItem, LabelListItem }
+export { Wrapper, SearchBar,SearchButton, WrapperSearch,ListItem, LabelListItem, LoadMoreButton }

@@ -1,9 +1,20 @@
 import './App.css';
-import { Home } from "./components/Home"
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+import { Home } from "./Pages/Home"
+import { PageItem } from "./Pages/PageItem"
 
 function App() {
   return (
-    <Home />
+    <Router>
+      <Switch>
+        <Route path="/questions/:id" children={<PageItem />} />
+        <Route path="/" children={<Home />} />
+      </Switch>
+    </Router>
   );
 }
 
