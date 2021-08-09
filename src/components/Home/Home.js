@@ -1,27 +1,30 @@
 import React, { useEffect, useState } from "react";
 import { AlertError } from "../AlertError"
+import { List } from "../List"
 import { Wrapper } from "./Home.style"
 import axios from 'axios';
+import { directivesApi } from '../../constants/directivesApi'
 
-const ENDPOINT_BASE = "https://private-anon-0dc9329667-blissrecruitmentapi.apiary-mock.com";
-const MESSAGE_OK = "OK"
-
+const {ENDPOINT_BASE, MESSAGE_OK} = directivesApi
 const Home = () => {
     const [statusReq, setStatusReq] = useState("");
 
-    useEffect(() => {
+    const getHealthApi = () => {
         axios.get(`${ENDPOINT_BASE}/health`)
         .then(({ data }) => {
             setStatusReq(data.status)
-            console.log(statusReq)
         })
+    }
+
+    useEffect(() => {
+        getHealthApi()
     });
 
-  
-    
     return(
         <Wrapper>
-            {statusReq != MESSAGE_OK && <AlertError />}
+            {statusReq !== MESSAGE_OK && <AlertError />}
+            {statusReq === MESSAGE_OK && <List/>}
+            
         </Wrapper>
     )
 }
