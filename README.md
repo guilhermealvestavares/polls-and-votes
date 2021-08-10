@@ -28,6 +28,11 @@ to run the project:
   npm install && npm start
 ```
 
+the application to open at 
+```bash
+  http://localhost:3000/
+```
+
   
 ## Features
 
