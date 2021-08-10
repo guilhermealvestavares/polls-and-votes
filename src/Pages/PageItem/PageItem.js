@@ -35,7 +35,6 @@ const PageItem = () => {
     }, []);
 
     const humanizeDate = timestamp => {
-        // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString/
         if (!timestamp) return ''
 
         return new Date(timestamp).toLocaleDateString()
@@ -48,7 +47,7 @@ const PageItem = () => {
                     <Question>{questionInfo.question}</Question>
                         {questionInfo.choices?.map(({choice,votes, id}, index) => {  
                             return (
-                                <WrapperChoices key={`${choice}${votes}${id}`}> 
+                                <WrapperChoices key={`${choice}${votes}${id}${index}`}> 
                                     <Choices>{choice}</Choices>
                                     <Choices>{votes} votes</Choices>
                                 </WrapperChoices>
