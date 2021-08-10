@@ -10,6 +10,7 @@ import {
 } from "./PageItem.style"
 import { directivesApi } from '../../constants/directivesApi'
 import { SendEmail } from "../../components/SendEmail"
+import { Offline as OfflineMessage} from "../../components/Offline"
 import axios from 'axios'
 import { Offline, Online } from "react-detect-offline";
 
@@ -66,7 +67,7 @@ const PageItem = () => {
             </Wrapper>
             </Online> 
             <Offline>
-                <p>You is offline</p>
+                <OfflineMessage>You is offline</OfflineMessage>
             </Offline> 
         </>
     )

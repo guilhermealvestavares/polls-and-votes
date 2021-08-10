@@ -3,6 +3,7 @@ import { AlertError } from "../../components/AlertError"
 import { List } from "../../components/List"
 import { directivesApi } from '../../constants/directivesApi'
 import { Wrapper } from "./Home.style"
+import { Offline as OfflineMessage} from "../../components/Offline"
 import axios from 'axios';
 import { Offline, Online } from "react-detect-offline";
 
@@ -33,7 +34,7 @@ const Home = () => {
             </Online>
             
             <Offline>
-                <p>You is offline</p>
+                <OfflineMessage>You is offline</OfflineMessage>
             </Offline>
         </>
     )
