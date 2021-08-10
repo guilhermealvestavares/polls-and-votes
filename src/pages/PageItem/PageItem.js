@@ -34,7 +34,7 @@ const PageItem = () => {
 
     useEffect(() => {
         getDataQuestionsById()
-    }, [questionInfo]);
+    });
 
     const humanizeDate = timestamp => {
         if (!timestamp) return ''
