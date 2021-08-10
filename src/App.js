@@ -4,8 +4,8 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
-import { Home } from "./Pages/Home"
-import { PageItem } from "./Pages/PageItem"
+import { Home } from "./pages/Home"
+import { PageItem } from "./pages/PageItem"
 
 function App() {
   return (
