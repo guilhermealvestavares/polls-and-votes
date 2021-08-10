@@ -1,70 +1,103 @@
-# Getting Started with Create React App
+# Polls And Votes
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Application that user can list, search for more items, enter item pages and share response by email!
 
-## Available Scripts
+## Authors
 
-In the project directory, you can run:
+- [@guilhermealvestavares](https://www.github.com/guilhermealvestavares)
+- [Linkedin](https://www.linkedin.com/in/guilhermealvestavares/)
 
-### `npm start`
+  
+## 🚀 About Me
+Since my first contact with development, I have always a very interest to develop layouts, experiences and see analysis and user behavior. In the college, I've always been skewed to code in the back-end, but my desire is to have contact with the final user, the usability and others datas.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Among my experience, used diverse technologies: Web development (HTML, css and pré processors, JS and tests auto, React and other technologies used in front-end development.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+In my current experience, we think a lot about performance, user experience and best practices in write our codes.
 
-### `npm test`
+Technologies used: HTML (Jekyll), CSS (Stylus, emotion, styled-components, Bootstrap), Javascript (React, react-testing-library, jQuery), Test Automation (Jest, react-tests) (Unit Tests, TDD) Gatsby, Git, Google AMP
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Platforms used: Google Optmize, Github, Jira
 
-### `npm run build`
+  
+## Run
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+to run the project:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+  npm install && npm start
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  
+## Features
 
-### `npm run eject`
+- Popup error case request fail
+- Component List (Search items for search bar, search items for url, load more items and click in items)
+- Click items page (With react router)
+- Share screen for email
+- Online and offline toggle
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+  
+## Stack
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- React (and hooks)
+- Styled components
+- External libs (lodash, react-detect-offline, react-router and axios)
+- Postman
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+  
+## Uses
 
-### Code Splitting
+**Case 1:**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+*The user digit in the url:*
 
-### Analyzing the Bundle Size
+```bash
+/questions/7
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+should return an item page with id 7
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+**Case 2:**
 
-### Advanced Configuration
+*The user digit in the url:*
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```bash
+/?filter=lorem
+```
 
-### Deployment
+should fill the searchBar and return datas that matches with lorem *(the filter api not working)*
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+**Case 3:**
 
-### `npm run build` fails to minify
+*The user lost the connection:*
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+should show messageError connection
+
+**Case 4:**
+
+*The user fill email adress*
+
+
+should show request message status (sucess or error)
+
+
+
+## Components
+
+- AlertError
+- List
+- Offline
+- SendEmail
+
+
+## Pages
+
+- PageItem
+- Home
