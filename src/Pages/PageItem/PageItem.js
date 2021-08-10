@@ -10,6 +10,7 @@ import {
 } from "./PageItem.style"
 import axios from 'axios'
 import { directivesApi } from '../../constants/directivesApi'
+import { SendEmail } from "../../components/SendEmail"
 
 import {
     useParams
@@ -26,9 +27,7 @@ const PageItem = () => {
         axios.get(`${ENDPOINT_BASE}/questions/${id}`)
         .then(({ data }) => {
             setQuestionInfo(data)
-            console.log(questionInfo)
         })
-        
     }
 
     useEffect(() => {
@@ -61,6 +60,10 @@ const PageItem = () => {
                 </>
             }
             <ReturnButton to={`/`}>Return to List</ReturnButton>
+
+            <SendEmail>
+
+            </SendEmail>
         </Wrapper>
     )
 }
